@@ -30,3 +30,18 @@ document.addEventListener('scroll', function() {
         element.classList.remove('visible');
     }
 });
+
+
+const swiper = new Swiper('.swiper-container', {
+    loop: true, // Permite looping infinito
+    autoplay: {
+      delay: 3000, // Tempo entre as transições (em milissegundos)
+      disableOnInteraction: false, // Continua rodando após interação do usuário
+    },
+    speed: 600, // Velocidade da transição (em milissegundos)
+    slidesPerView: 1, // Número de slides visíveis
+    spaceBetween: 0, // Espaço entre slides
+    pagination: false, // Desativa os dots
+    navigation: false, // Desativa as setas
+  });
+  
