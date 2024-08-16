@@ -400,12 +400,13 @@ text-transform: uppercase;
 }
 .about {
     width: 100%;
-    background-image: url('img/about-bkg.png');
+    display: flex;
 }
 
 .about__left {
     width: 50%;
     text-align: center;
+    background-image: url('img/about-bkg.png');
 }
 
 .about__left p{
@@ -416,6 +417,7 @@ text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 1.12px;
     text-transform: uppercase;
+    padding-top: 80px;
 }
 
 .about__left h3 {
@@ -426,4 +428,10 @@ text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 5.12px;
     text-transform: uppercase;
+    padding-bottom: 80px;
+}
+
+.about__right {
+    width: 50%;
+    background-color: #6E0D17;
 }
