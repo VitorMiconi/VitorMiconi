@@ -407,7 +407,10 @@ text-transform: uppercase;
 .about__left {
     width: 50%;
     text-align: center;
-    background-image: url('img/about-bkg.png');
+    display: flex;
+    background-image: url(img/about-bkg.png);
+    align-items: center;
+    justify-content: center;
 }
 
 .about__left p{
@@ -418,7 +421,6 @@ text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 1.12px;
     text-transform: uppercase;
-    padding-top: 80px;
 }
 
 .about__left h3 {
@@ -429,7 +431,6 @@ text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 5.12px;
     text-transform: uppercase;
-    padding-bottom: 80px;
 }
 
 .about__right {
