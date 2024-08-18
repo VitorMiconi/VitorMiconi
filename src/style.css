@@ -457,3 +457,59 @@ text-transform: uppercase;
 .about__right__me__button img{
     width: 9px;
 }
+
+.footer {
+    padding: 0px 20px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__left {
+    width: 50%;
+    color: white;
+    display: inline-grid;
+}
+
+.footer__left__cv{
+    font-weight: 300;
+    display: contents;
+}
+
+
+.footer__right {
+    width: 50%;
+
+}
+
+.footer__right h3 {
+    color: #FFF;
+    font-family: "Anton SC";
+    font-size: 92px;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 83px;
+    text-align: end;
+}
+
+.footer__right__sm {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 60px;
+    gap: 20px;
+}
+
+
+.ass {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 20px 20px 20px;
+    color: white;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+
+
