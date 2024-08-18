@@ -555,4 +555,7 @@ text-transform: uppercase;
         margin-bottom: 30px;
         padding: 10px;
     }
+    body {
+        overflow-x: hidden;
+    }
 }
