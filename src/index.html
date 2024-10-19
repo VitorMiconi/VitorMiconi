@@ -2,21 +2,259 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-      .box {
-          width: 100px;
-          height: 100px;
-          background-color: #3498db;
-          position: relative;
-      }
+    :root {
+      --primary: rgb(240, 246, 255);
+      --secondary: #212121;
+      --border: 1px solid #21212157;
+
+      --ease: cubic-bezier(0.255, 0.655, 0.02, 0.995);
+      --transition-width: width 0.64s var(--ease);
+      --transition-opacity: opacity 1.2s var(--ease);
+    }
+
+    html {
+      font-size: calc(100vw / 1920 * 10);
+    }
+    body {
+      font-family: 'Primary';
+      background-color: var(--primary);
+    }
+
+    h1 {
+      font-size: 48rem;
+      line-height: 0.8;
+    }
+    h2 {
+      font-size: 6rem;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 3.2rem;
+    }
+    span {
+      font-size: 1.6rem;
+      text-transform: uppercase;
+    }
+    .app {
+      color: var(--secondary);
+      padding: 2rem;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .--mobile {
+      display: none;
+    }
+    .section {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 4rem);
+      border: var(--border);
+      border-radius: 3.2rem;
+      overflow: hidden;
+    }
+    .section_header {
+      border-bottom: var(--border);
+    }
+    .section_header_list {
+      display: flex;
+      width: 100%;
+    }
+    .section_header_list_item {
+      font-size: 3.2rem;
+      padding: 2rem;
+    }
+    .section_header_list_item:nth-child(1) {
+      flex: 1;
+      border-right: var(--border);
+    }
+    .section_header_list_item:nth-child(2) {
+      flex: 0.25;
+      border-right: var(--border);
+    }
+    .section_header_list_item:nth-child(3) {
+      flex: 1;
+      border-right: var(--border);
+      text-align: right;
+    }
+    .section_header_list_item:nth-child(4) {
+      flex: 0.25;
+    }
+    .section_container {
+      display: flex;
+      width: 100%;
+      height: inherit;
+    }
+    .section_col {
+      position: relative;
+      width: 60rem;
+      border-right: var(--border);
+      padding: 8rem 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: var(--transition-width);
+      overflow: hidden;
+    }
+    .section_col:last-child {
+      border: none;
+    }
+    .section_col.active {
+      width: 200rem;
+      transition: var(--transition-width);
+      transform-origin: left;
+    }
+    .section_col.active .section_col_media { 
+      opacity: 1;
+      transition: var(--transition-opacity);
+    }
+    .section_col_media {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: -1;
+      opacity: 0;
+      transition: var(--transition-opacity);
+    }
+    .section_col_media::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: var(--primary);
+      opacity: 0.4;
+    }
+
+    img.section_col_image {
+      position: relative;
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+    }
+    .section_col_caption {
+      text-align: center;
+      width: 24rem;
+    }
+    .section_col_title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media screen and (max-width: 768px) {
+
+    }
   </style>
 </head>
 <body>
 
-  <div class="box"></div>
+  <section class="app">
+    <div class="section">
+      <div class="section_header">
+        <div class="section_header_list">
+          <div class="section_header_list_item">Cerleva DigitalCare</div>
+          <div class="section_header_list_item --desktop"></div>
+          <div class="section_header_list_item --desktop"></div>
+          <div class="section_header_list_item">&#x2014;</div>
+        </div>
+      </div>
+      <div class="section_container">
+        <div class="section_col">
+          <div class="section_col_media">
+            <img src="img/home-marine.png" alt="" class="section_col_image">
+          </div> 
+          <div class="section_col_caption">
+            <span>Push the boundaries of tradition</span>
+          </div>
+          <div class="section_col_title">
+            <h2>Elevate</h2>
+            <p class="--mobile">Discover More &rarr;</p>
+          </div>
+          <div class="section_col_number">
+            <h1>1</h1>
+          </div>
+        </div>
+        <div class="section_col">
+          <div class="section_col_media">
+            <img src="img/home-marine.png" alt="" class="section_col_image">
+          </div> 
+          <div class="section_col_caption">
+            <span>Push the boundaries of tradition</span>
+          </div>
+          <div class="section_col_title">
+            <h2>Elevate</h2>
+            <p class="--mobile">Discover More &rarr;</p>
+          </div>
+          <div class="section_col_number">
+            <h1>2</h1>
+          </div>
+        </div>
+        <div class="section_col">
+          <div class="section_col_media">
+            <img src="img/home-marine.png" alt="" class="section_col_image">
+          </div> 
+          <div class="section_col_caption">
+            <span>Push the boundaries of tradition</span>
+          </div>
+          <div class="section_col_title">
+            <h2>Elevate</h2>
+            <p class="--mobile">Discover More &rarr;</p>
+          </div>
+          <div class="section_col_number">
+            <h1>3</h1>
+          </div>
+        </div>
+        <div class="section_col">
+          <div class="section_col_media">
+            <img src="img/home-marine.png" alt="" class="section_col_image">
+          </div> 
+          <div class="section_col_caption">
+            <span>Push the boundaries of tradition</span>
+          </div>
+          <div class="section_col_title">
+            <h2>Elevate</h2>
+            <p class="--mobile">Discover More &rarr;</p>
+          </div>
+          <div class="section_col_number">
+            <h1>4</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="js/main.js"></script>
+  <script>
+    const section = document.querySelector('.section'),
+          sectionCols = document.querySelectorAll('.section_col');
+
+    const isDesktop = window.matchMedia('(min-width: 768px)');
+
+    const init = () => {
+      if (isDesktop.matches) addEventListeners();
+    };
+
+    const addEventListeners = () => {
+      sectionCols[0].classList.add('active');  // Ativa a primeira coluna inicialmente
+
+      sectionCols.forEach((col) => {
+        col.addEventListener('mouseenter', () => {
+          sectionCols.forEach((el) => el.classList.remove('active'));  // Remove 'active' de todas as colunas
+          col.classList.add('active');  // Adiciona 'active' à coluna atual
+        });
+      });
+    };
+
+    init();
+  </script>
 </body>
 </html>
